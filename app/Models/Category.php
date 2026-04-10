@@ -24,4 +24,9 @@ class Category extends Model
     {
         return $this->status ? 'success' : 'danger';
     }
+
+    public function products()
+    {
+        return $this->hasMany(Product::class);
+    }
 }
